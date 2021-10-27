@@ -38,7 +38,7 @@ export const OnOff = ({onOff, setOnOff}: PropsType) => {
     }
 
     const onChangeOnHandler=() => setOnOff(true)
-    const onChangeOffHandler=() => setOnOff(true)
+    const onChangeOffHandler=() => setOnOff(false)
 
     return (
         <div>
