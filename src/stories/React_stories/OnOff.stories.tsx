@@ -14,9 +14,16 @@ const Template: ComponentStory<typeof OnOff> = (args) => {
     return (<OnOff {...args} />)
 }
 
-export const Primary = Template.bind({});
+export const OnSwitch = Template.bind({});
 
-Primary.args = {
+OnSwitch.args = {
+    setOnOff: action(`onOff`),
+    onOff: true
+}
+
+export const OffSwitch = Template.bind({});
+
+OffSwitch.args = {
     setOnOff: action(`onOff`),
     onOff: false
 }

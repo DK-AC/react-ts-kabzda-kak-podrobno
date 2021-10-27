@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import {RatingValueType} from "./components/Rating/Rating";
 import {UnControlledOnOff} from "./components/UnControlledOnOff/UnControlledOnOff";
+import {Accordion} from "./components/Accordion/Accordion";
+import {UnControlledAccordion} from "./components/UnControlledAccordion/UnControlledAccordion";
 
 export const App = () => {
     console.log('App rendering')
@@ -17,9 +19,9 @@ export const App = () => {
             {/*<Accordion title={'User'} collapsed={collapsed} setCollapsed={setCollapsed}/>*/}
             {/*<Rating valueStar={ratingValue} setRatingValue={setRatingValue}/>*/}
             {/*<UnControlledRating/>*/}
-            <UnControlledOnOff onChange={setOnOff}/>{onOff.toString()}
-            {/*<UnControlledAccordion title={'Menu'}/>*/}
-            {/*<UnControlledAccordion title={'User'}/>*/}
+            {/*<UnControlledOnOff onChange={setOnOff}/>{onOff.toString()}*/}
+            <UnControlledAccordion title={'Menu'}/>
+            <UnControlledAccordion title={'User'}/>
             {/*<OnOff onOff={onOff} setOnOff={setOnOff}/>*/}
 
         </div>

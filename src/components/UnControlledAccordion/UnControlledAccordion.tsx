@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-type AccordionPropsType = {
+type UnControlledAccordionPropsType = {
     title: string
 }
 
@@ -10,7 +10,7 @@ type AccordionTitlePropsType = {
     collapsed: boolean
 }
 
-export const UnControlledAccordion = ({title}: AccordionPropsType) => {
+export const UnControlledAccordion = ({title}: UnControlledAccordionPropsType) => {
     console.log('UnControlledAccordion rendering')
 
     const [collapsed, setCollapsed] = useState(true)
@@ -26,7 +26,7 @@ export const UnControlledAccordion = ({title}: AccordionPropsType) => {
     );
 };
 
-const AccordionTitle = ({title, setCollapsed, collapsed}: AccordionTitlePropsType) => {
+export const AccordionTitle = ({title, setCollapsed, collapsed}: AccordionTitlePropsType) => {
     console.log('AccordionTitle rendering')
 
     const onChangeCollapsedHandler = () => setCollapsed(!collapsed)

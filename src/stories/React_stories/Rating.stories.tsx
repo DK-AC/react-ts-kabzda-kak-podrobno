@@ -17,9 +17,11 @@ const Template: ComponentStory<typeof Rating> = (args) => {
     return (<Rating {...args} />)
 }
 
-export const Primary = Template.bind({});
+export const Star = Template.bind({});
 
-Primary.args = {
-    valueStar: 3,
+Star.args = {
+    valueStar: 2,
     setRatingValue: action('Rating')
 }
+
+
