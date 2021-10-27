@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import {RatingValueType} from "./components/Rating/Rating";
+import {UnControlledOnOff} from "./components/UnControlledOnOff/UnControlledOnOff";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = () => {
+    console.log('App rendering')
+
+    const [ratingValue, setRatingValue] = useState<RatingValueType>(0)
+    const [collapsed, setCollapsed] = useState(false)
+    const [onOff, setOnOff] = useState(false)
+
+    return (
+        <div>
+            {/*<PageTitle title={' This is App component'}/>*/}
+            {/*<Accordion title={'Menu'} collapsed={collapsed} setCollapsed={setCollapsed}/>*/}
+            {/*<Accordion title={'User'} collapsed={collapsed} setCollapsed={setCollapsed}/>*/}
+            {/*<Rating valueStar={ratingValue} setRatingValue={setRatingValue}/>*/}
+            {/*<UnControlledRating/>*/}
+            <UnControlledOnOff onChange={setOnOff}/>{onOff.toString()}
+            {/*<UnControlledAccordion title={'Menu'}/>*/}
+            {/*<UnControlledAccordion title={'User'}/>*/}
+            {/*<OnOff onOff={onOff} setOnOff={setOnOff}/>*/}
+
+        </div>
+    );
 }
 
-export default App;
+type PageTitlePropsType = {
+    title: string
+}
+
+const PageTitle = ({title}: PageTitlePropsType) => {
+    console.log('PageTitle rendering')
+    return (
+        <h1> {title}</h1>
+    )
+
+}
+
+
