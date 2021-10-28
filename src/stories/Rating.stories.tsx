@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {Rating} from "../../components/Rating/Rating";
+import {Rating} from "../components/Rating/Rating";
 import {action} from "@storybook/addon-actions";
 
 

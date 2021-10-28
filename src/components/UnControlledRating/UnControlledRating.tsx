@@ -1,21 +1,39 @@
 import React, {useState} from 'react';
 import {RatingValueType} from "../Rating/Rating";
 
-type PropsType = {}
+type PropsType = {
+    defaultValue?: RatingValueType
+    changeDefaultValue: (value: RatingValueType) => void
+}
 
-export const UnControlledRating = ({}: PropsType) => {
+export const UnControlledRating = ({defaultValue, changeDefaultValue}: PropsType) => {
     console.log('Rating rendering')
 
-    const [valueStar, setValueStar] = useState<RatingValueType>(0)
+    const [valueStar, setValueStar] = useState<RatingValueType>(defaultValue ? defaultValue : 0)
 
 
     return (
         <div>
-            <Star selected={valueStar > 0} changeValueStar={() => setValueStar(1)}/>
-            <Star selected={valueStar > 1} changeValueStar={() => setValueStar(2)}/>
-            <Star selected={valueStar > 2} changeValueStar={() => setValueStar(3)}/>
-            <Star selected={valueStar > 3} changeValueStar={() => setValueStar(4)}/>
-            <Star selected={valueStar > 4} changeValueStar={() => setValueStar(5)}/>
+            <Star selected={valueStar > 0} changeValueStar={() => {
+                setValueStar(1)
+                changeDefaultValue(1)
+            }}/>
+            <Star selected={valueStar > 1} changeValueStar={() => {
+                setValueStar(2)
+                changeDefaultValue(2)
+            }}/>
+            <Star selected={valueStar > 2} changeValueStar={() => {
+                setValueStar(3)
+                changeDefaultValue(3)
+            }}/>
+            <Star selected={valueStar > 3} changeValueStar={() => {
+                setValueStar(4)
+                changeDefaultValue(4)
+            }}/>
+            <Star selected={valueStar > 4} changeValueStar={() => {
+                setValueStar(5)
+                changeDefaultValue(5)
+            }}/>
         </div>
     );
 };

@@ -1,13 +1,14 @@
 import React, {useState} from 'react';
 
 type PropsType = {
+    modeOn?: boolean
     onChange: (onOff: boolean) => void
 }
 
-export const UnControlledOnOff = React.memo(({onChange}: PropsType) => {
+export const UnControlledOnOff = React.memo(({onChange, modeOn}: PropsType) => {
     console.log('UnControlledOnOff rendering')
 
-    const [value, setValue] = useState(false)
+    const [value, setValue] = useState(modeOn ? modeOn : false)
 
     console.log('on:', value)
 
