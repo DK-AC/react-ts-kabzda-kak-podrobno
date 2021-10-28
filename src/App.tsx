@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {RatingValueType} from "./components/Rating/Rating";
 import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
-import {InputTest} from "./components/InputTest/InputTest";
+import {InputCheckbox} from "./components/InputCheckbox/InputCheckbox";
 
 export const App = () => {
     console.log('App rendering')
@@ -11,6 +11,7 @@ export const App = () => {
     const [collapsed, setCollapsed] = useState(false)
     const [onOff, setOnOff] = useState(false)
     const [inputValue, setInputValue] = useState('')
+    const [checked, setChecked] = useState(false)
 
 
     return (
@@ -25,8 +26,8 @@ export const App = () => {
             {/*<UnControlledAccordion title={'Menu'}/>*/}
             {/*<UnControlledAccordion title={'User'}/>*/}
             {/*<OnOff onOff={onOff} setOnOff={setOnOff}/>*/}
-            <InputTest value={inputValue} setInputValue={setInputValue}/>
-
+            {/*<Input value={inputValue} setInputValue={setInputValue}/>*/}
+            <InputCheckbox checked={checked} setChecked={setChecked}/>
         </div>
     );
 }

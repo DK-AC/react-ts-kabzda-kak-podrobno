@@ -5,7 +5,7 @@ type PropsType = {
     setInputValue: (value: string) => void
 }
 
-export const InputTest = ({setInputValue, value}: PropsType) => {
+export const Input = ({setInputValue, value}: PropsType) => {
 
 
     const onChangeValue = (e: ChangeEvent<HTMLInputElement>) => {

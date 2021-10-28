@@ -1,18 +1,18 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {InputTest} from "./InputTest";
+import {Input} from "./Input";
 import {action} from "@storybook/addon-actions";
 
 
 export default {
-    title: 'React_Stories/InputTest',
-    component: InputTest,
+    title: 'React_Stories/Input',
+    component: Input,
     arg: {
     },
-} as ComponentMeta<typeof InputTest>;
+} as ComponentMeta<typeof Input>;
 
-const Template: ComponentStory<typeof InputTest> = (args) => {
-    return (<InputTest {...args} />)
+const Template: ComponentStory<typeof Input> = (args) => {
+    return (<Input {...args} />)
 }
 
 export const ChangeInputTest = Template.bind({});
