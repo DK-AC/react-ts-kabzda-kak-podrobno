@@ -1,34 +1,24 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {AccordionTitle} from "../../components/UnControlledAccordion/UnControlledAccordion";
-import {action} from "@storybook/addon-actions";
+import {UnControlledAccordion} from "../../components/UnControlledAccordion/UnControlledAccordion";
 
 
 export default {
-    title: 'React_Stories/AccordionTitle',
-    component: AccordionTitle,
-    arg: {},
-} as ComponentMeta<typeof AccordionTitle>;
+    title: 'React_Stories/UnControlledAccordion',
+    component: UnControlledAccordion,
+} as ComponentMeta<typeof UnControlledAccordion>;
 
-const Template: ComponentStory<typeof AccordionTitle> = (args) => {
-    return (<AccordionTitle {...args} />)
+const Template: ComponentStory<typeof UnControlledAccordion> = (args) => {
+    return (<UnControlledAccordion {...args} />)
 }
 
-export const UnControlledAccordionTitleTrue = Template.bind({});
+export const UnControlledAccordionTitle = Template.bind({});
 
-UnControlledAccordionTitleTrue.args = {
-    title: 'Menu',
-    collapsed: true,
-    setCollapsed:action('UnControlledAccordionTitleTrue')
+UnControlledAccordionTitle.args = {
+    title: 'UnControlledAccordionTitle Test'
 }
 
-export const UnControlledAccordionTitleFalse = Template.bind({});
 
-UnControlledAccordionTitleFalse.args = {
-    title: 'User',
-    collapsed: false,
-    setCollapsed:action('UnControlledAccordionTitleFalse')
-}
 
 
 

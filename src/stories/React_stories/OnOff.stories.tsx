@@ -5,7 +5,7 @@ import {OnOff} from "../../components/OnOff/OnOff";
 
 
 export default {
-    title: 'React_Stories/UnControlledOnOff',
+    title: 'React_Stories/OnOff',
     component: OnOff,
     arg: {},
 } as ComponentMeta<typeof OnOff>;

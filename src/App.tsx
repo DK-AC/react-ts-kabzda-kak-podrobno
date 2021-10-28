@@ -4,6 +4,7 @@ import {RatingValueType} from "./components/Rating/Rating";
 import {UnControlledOnOff} from "./components/UnControlledOnOff/UnControlledOnOff";
 import {Accordion} from "./components/Accordion/Accordion";
 import {UnControlledAccordion} from "./components/UnControlledAccordion/UnControlledAccordion";
+import {UnControlledRating} from "./components/UnControlledRating/UnControlledRating";
 
 export const App = () => {
     console.log('App rendering')
@@ -18,10 +19,10 @@ export const App = () => {
             {/*<Accordion title={'Menu'} collapsed={collapsed} setCollapsed={setCollapsed}/>*/}
             {/*<Accordion title={'User'} collapsed={collapsed} setCollapsed={setCollapsed}/>*/}
             {/*<Rating valueStar={ratingValue} setRatingValue={setRatingValue}/>*/}
-            {/*<UnControlledRating/>*/}
+            <UnControlledRating/>
             {/*<UnControlledOnOff onChange={setOnOff}/>{onOff.toString()}*/}
-            <UnControlledAccordion title={'Menu'}/>
-            <UnControlledAccordion title={'User'}/>
+            {/*<UnControlledAccordion title={'Menu'}/>*/}
+            {/*<UnControlledAccordion title={'User'}/>*/}
             {/*<OnOff onOff={onOff} setOnOff={setOnOff}/>*/}
 
         </div>
