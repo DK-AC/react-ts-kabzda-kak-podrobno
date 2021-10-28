@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {UnControlledAccordion} from "../components/UnControlledAccordion/UnControlledAccordion";
+import {UnControlledAccordion} from "./UnControlledAccordion";
 
 
 export default {

@@ -1,6 +1,6 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
-import {UnControlledOnOff} from "../components/UnControlledOnOff/UnControlledOnOff";
+import {UnControlledOnOff} from "./UnControlledOnOff";
 import {action} from "@storybook/addon-actions";
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {ComponentMeta, ComponentStory} from '@storybook/react';
 import {action} from "@storybook/addon-actions";
-import {OnOff} from "../components/OnOff/OnOff";
+import {OnOff} from "./OnOff";
 
 
 export default {
